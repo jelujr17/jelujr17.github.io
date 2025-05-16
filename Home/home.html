@@ -1,5 +1,4 @@
 <div class="contacto-container">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/contacto.js"></script>
     <div class="contacto-info">
         <h1>Contáctanos</h1>
@@ -8,7 +7,13 @@
     </div>
 
     <div class="contacto-form">
-        <form action="#" method="POST">
+        <form action="https://formsubmit.co/marioml7902@gmail.com" method="POST">
+            <!-- Campos ocultos para configurar FormSubmit -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
+            <input type="hidden" name="_captcha" value="false"> <!-- Opcional: deshabilitar captcha -->
+            <input type="hidden" name="_next" value="https://jelujr17.github.io/index.html">
+            <input type="hidden" name="_template" value="table"> <!-- Formato de correo -->
+            
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombre">Nombre <span class="obligatorio">(obligatorio)</span></label>
@@ -30,7 +35,7 @@
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn-enviar">Enviar</button>
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
         </form>
     </div>
 </div>
