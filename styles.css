@@ -1,0 +1,341 @@
+/* filepath: c:\Users\mario\Documents\jelujr17.github.io\styles.css */
+/* Primero importamos la fuente Instrument Serif desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e8e7e3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color: #e8e7e3;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.logo a {
+    font-size: 22px;
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: 'Times New Roman', serif;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #666;
+}
+
+/* Resto de los estilos para el contenido principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Ajustes para que las secciones que necesitan fondo blanco lo mantengan */
+.hero, 
+.productos, 
+.servicios, 
+.about {
+    background-color: white;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* El formulario de contacto ya tiene el color de fondo correcto */
+.contacto {
+    background-color: #e8e7e3; /* Mantiene el mismo color que el body */
+    padding: 40px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #e8e7e3;
+    padding: 60px 0;
+    font-family: 'Times New Roman', serif;
+    width: 100%;
+}
+
+/* Ajustar alineación del footer para mantener consistencia con el resto del contenido */
+
+/* Contenedor principal del footer */
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Cambiado de flex-end a space-between */
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* Ajuste del footer-left para alinearlo con el contenido principal */
+.footer-left {
+    flex: 0 0 auto;
+    /* Eliminamos margin-right para que se alinee naturalmente */
+}
+
+/* Asegurar que el nombre tenga el estilo adecuado */
+.footer-left h2 {
+    font-family: 'Instrument Serif', serif;
+    margin-bottom: 20px;
+    font-size: 32px; /* Aumentado de 24px a 32px */
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.5px; /* Añadir un poco de espaciado entre letras para mejor legibilidad */
+}
+
+/* Ajustar los iconos de redes sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links svg {
+    width: 28px; /* Aumentado de 24px */
+    height: 28px; /* Aumentado de 24px */
+}
+
+.footer-right {
+    flex: 0 0 auto; /* Ajustar para que ocupe el espacio necesario */
+    display: flex;
+    gap: 40px; /* Espacio entre columnas */
+}
+
+.footer-column {
+    min-width: 140px; /* Ancho mínimo para cada columna */
+    margin-left: 20px; /* Añadir margen izquierdo entre columnas */
+}
+
+.footer-column:first-child {
+    margin-left: 0; /* Eliminar margen izquierdo de la primera columna */
+}
+
+footer h2 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+footer h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px; /* Aumentado de 16px a 20px */
+    font-weight: 500; /* Peso medio para mejor legibilidad */
+    margin-bottom: 15px; /* Aumentado de 10px a 15px */
+    letter-spacing: 0.5px; /* Ligero espaciado entre letras */
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #666;
+}
+
+/* Mejoras para el footer */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+social-links a:hover {
+    color: #666;
+}
+
+.footer-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #333;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.contact-button:hover {
+    background: #555;
+}
+
+/* Ajustes para centrar el contenido del footer-bottom */
+.footer-bottom {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #333;
+}
+
+.legal-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.legal-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.legal-links span {
+    color: #999;
+}
+
+img, svg, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+        min-width: 45%;
+        margin-left: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+    }
+}
+
+/* Y aquí añade el resto de tus estilos... */
