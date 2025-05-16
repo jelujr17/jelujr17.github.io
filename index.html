@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Martínez</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./Home/home.css">
 
 </head>
 
@@ -90,7 +90,7 @@
                 </div>
                 <div class="footer-column">
                     <h4>Contacto</h4>
-                    <p><a href="mailto:correo@ejemplo.com">marioml7902@gmail.com</a><br>
+                    <p><a href="mailto:marioml7902@gmail.com">marioml7902@gmail.com</a><br>
                     <p><a href="/contacto" class="contact-button">Enviar mensaje</a></p>
                 </div>
                 <div class="footer-column">
@@ -117,7 +117,7 @@
     <script>
         // Función para cargar el formulario de contacto
         document.addEventListener('DOMContentLoaded', function () {
-            fetch('home.html')
+            fetch('./Home/home.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('contacto-seccion').innerHTML = data;

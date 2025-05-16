@@ -1,9 +1,12 @@
 <div class="contacto-container">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contacto.js"></script>
     <div class="contacto-info">
         <h1>Contáctanos</h1>
-        <p>¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos tener noticias tuyas pronto.</p>
+        <p>¿Quieres que trabajemos juntos? Ingresa tus datos y nos pondremos en contacto contigo en breve. Esperamos
+            tener noticias tuyas pronto.</p>
     </div>
-    
+
     <div class="contacto-form">
         <form action="#" method="POST">
             <div class="form-row">
@@ -16,17 +19,17 @@
                     <input type="text" id="apellidos" name="apellidos">
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label for="email">Correo electrónico <span class="obligatorio">(obligatorio)</span></label>
                 <input type="email" id="email" name="email" required>
             </div>
-            
+
             <div class="form-group">
                 <label for="mensaje">Mensaje <span class="obligatorio">(obligatorio)</span></label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
-            
+
             <button type="submit" class="btn-enviar">Enviar</button>
         </form>
     </div>
