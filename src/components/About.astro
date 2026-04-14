@@ -1,0 +1,70 @@
+---
+const stack = [
+  { label: 'Lenguajes', items: ['PHP', 'Java', 'JavaScript', 'C', 'C++', 'HTML/CSS', 'Dart'] },
+  { label: 'Bases de Datos', items: ['MySQL', 'PostgreSQL', 'MongoDB'] },
+  { label: 'Frameworks', items: ['Angular', 'Flutter', 'Node.js', 'Ionic', 'Bootstrap'] },
+  { label: 'Herramientas', items: ['Git', 'Docker', 'AWS', 'GCP', 'Heroku', 'JIRA'] },
+];
+---
+
+<section id="sobre-mi" class="py-24 bg-white reveal-section">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="flex items-center gap-4 mb-14">
+      <span class="text-teal-600 font-mono text-sm font-medium">01.</span>
+      <h2 class="text-2xl font-bold text-slate-900">Sobre mí</h2>
+      <div class="flex-1 h-px bg-slate-200 max-w-xs"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- Bio -->
+      <div class="space-y-5 text-slate-600 leading-relaxed">
+        <p>
+          Soy un estudiante de último año del grado en <strong class="text-slate-800">Ingeniería Multimedia</strong> con
+          un fuerte enfoque en la programación y el desarrollo de aplicaciones nativas. Me destaco
+          por mi habilidad para aprender rápidamente y adaptarme a nuevas tecnologías.
+        </p>
+        <p>
+          Tengo experiencia trabajando tanto de forma independiente como en equipo, y busco
+          oportunidades para aplicar y expandir mis habilidades en un entorno profesional dinámico y
+          colaborativo.
+        </p>
+        <p>
+          Estoy motivado por la idea de contribuir con soluciones innovadoras y seguir creciendo
+          como desarrollador.
+        </p>
+
+        <a
+          href="/resume/CV.pdf"
+          target="_blank"
+          class="inline-flex items-center gap-2 mt-2 text-teal-600 font-semibold text-sm hover:text-teal-700 group"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          Descargar CV
+          <span class="w-0 group-hover:w-full h-px bg-teal-600 transition-all duration-200 block absolute bottom-0 left-0"></span>
+        </a>
+      </div>
+
+      <!-- Stack tags -->
+      <div class="space-y-6">
+        {stack.map(({ label, items }) => (
+          <div>
+            <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">{label}</h3>
+            <div class="flex flex-wrap gap-2">
+              {items.map(item => (
+                <span class="px-3 py-1 text-sm font-medium bg-slate-50 text-slate-700 border border-slate-200 rounded-full hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50 transition-colors cursor-default">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

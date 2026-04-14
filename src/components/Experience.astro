@@ -1,0 +1,91 @@
+---
+const jobs = [
+  {
+    company: 'Jaquemate Mayoristas',
+    url: 'https://jaquemate.es',
+    role: 'Desarrollador de aplicaciones nativas/web',
+    period: '2024',
+    location: 'Alicante, España',
+    logo: '/img/logoJM.jpg',
+    bullets: [
+      'Diseño y administración de base de datos.',
+      'Diseño y desarrollo de aplicaciones enfocadas a empresas de ventas al por mayor.',
+      'Diseño y desarrollo de página web.',
+    ],
+    tech: ['Flutter', 'JavaScript', 'MySQL', 'PHP', 'CSS'],
+  },
+  {
+    company: 'Residencia Doña Rosa',
+    url: 'https://terceraedadalicante.com',
+    role: 'Desarrollador de aplicaciones nativas',
+    period: 'Jun 2023 – Oct 2023',
+    location: 'Alicante, España',
+    logo: '/img/logoDN.png',
+    bullets: [
+      'Diseño y administración de base de datos.',
+      'Diseño y desarrollo de aplicaciones enfocadas en residencias de la tercera edad.',
+      'Automatización de procesos de los diferentes departamentos de una residencia.',
+    ],
+    tech: ['Flutter', 'JavaScript', 'MySQL'],
+  },
+];
+---
+
+<section id="experiencia" class="py-24 bg-slate-50 reveal-section">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="flex items-center gap-4 mb-14">
+      <span class="text-teal-600 font-mono text-sm font-medium">02.</span>
+      <h2 class="text-2xl font-bold text-slate-900">Experiencia</h2>
+      <div class="flex-1 h-px bg-slate-200 max-w-xs"></div>
+    </div>
+
+    <div class="space-y-6">
+      {jobs.map((job, i) => (
+        <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+
+            <!-- Logo -->
+            <a href={job.url} target="_blank" rel="noopener" class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-xl border border-slate-100 overflow-hidden bg-white flex items-center justify-center p-1.5">
+                <img src={job.logo} alt={job.company} class="w-full h-full object-contain" />
+              </div>
+            </a>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+                <a href={job.url} target="_blank" rel="noopener"
+                  class="text-xl font-bold text-slate-900 hover:text-teal-600 transition-colors">
+                  {job.company}
+                </a>
+                <span class="text-sm text-slate-500 flex-shrink-0">{job.period} · {job.location}</span>
+              </div>
+
+              <p class="text-teal-600 font-medium text-sm mb-4">{job.role}</p>
+
+              <ul class="space-y-2 mb-5">
+                {job.bullets.map(b => (
+                  <li class="flex items-start gap-2 text-slate-600 text-sm leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              <div class="flex flex-wrap gap-2">
+                {job.tech.map(t => (
+                  <span class="px-2.5 py-1 text-xs font-medium bg-teal-50 text-teal-700 rounded-full border border-teal-100">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

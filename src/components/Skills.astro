@@ -1,0 +1,87 @@
+---
+const categories = [
+  {
+    label: 'Lenguajes',
+    icon: '{ }',
+    skills: [
+      { name: 'JavaScript', img: '/assets/img/javascript.png' },
+      { name: 'PHP', img: '/assets/img/php.png' },
+      { name: 'Java', img: '/assets/img/java.png' },
+      { name: 'Dart', img: '/assets/img/dart.png' },
+      { name: 'C', img: '/assets/img/C.png' },
+      { name: 'C++', img: '/assets/img/CMas.png' },
+      { name: 'HTML5', img: '/assets/img/html5-300x300.jpg' },
+      { name: 'CSS3', img: '/assets/img/css3-300x300.jpg' },
+    ],
+  },
+  {
+    label: 'Frameworks & Librerías',
+    icon: '⚙',
+    skills: [
+      { name: 'Flutter', img: '/assets/img/flutter300x300.png' },
+      { name: 'Bootstrap', img: '/assets/img/bootstrap.png' },
+      { name: 'Django', img: '/assets/img/django-logo.webp' },
+      { name: 'Flask', img: '/assets/img/flask-logo.png' },
+    ],
+  },
+  {
+    label: 'Bases de Datos',
+    icon: '🗄',
+    skills: [
+      { name: 'MySQL', img: '/assets/img/mysql-logo-1-300x300.jpg' },
+      { name: 'Firebase', img: '/assets/img/firebase.png' },
+    ],
+  },
+  {
+    label: 'Herramientas & Cloud',
+    icon: '☁',
+    skills: [
+      { name: 'Git', img: '/assets/img/git.png' },
+      { name: 'AWS', img: '/assets/img/aws.png' },
+      { name: 'Heroku', img: '/assets/img/heroku.png' },
+      { name: 'Trello', img: '/assets/img/trello.png' },
+    ],
+  },
+];
+---
+
+<section id="skills" class="py-24 bg-slate-50 reveal-section">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="flex items-center gap-4 mb-14">
+      <span class="text-teal-600 font-mono text-sm font-medium">04.</span>
+      <h2 class="text-2xl font-bold text-slate-900">Skills</h2>
+      <div class="flex-1 h-px bg-slate-200 max-w-xs"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {categories.map(cat => (
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-teal-600 font-mono text-lg">{cat.icon}</span>
+            <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-widest">{cat.label}</h3>
+          </div>
+          <div class="grid grid-cols-4 gap-4">
+            {cat.skills.map(skill => (
+              <div class="flex flex-col items-center gap-2 group">
+                <div class="w-12 h-12 p-1.5 rounded-xl bg-slate-50 border border-slate-100 group-hover:border-teal-200 group-hover:bg-teal-50 transition-all duration-200 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={skill.img}
+                    alt={skill.name}
+                    class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-200"
+                    loading="lazy"
+                  />
+                </div>
+                <span class="text-xs text-slate-500 font-medium text-center leading-tight group-hover:text-teal-600 transition-colors">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
